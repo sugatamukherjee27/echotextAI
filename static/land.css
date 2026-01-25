@@ -1,0 +1,223 @@
+:root {
+    /* Updated to a more professional Royal Blue and Slate palette */
+    --primary-blue: #0c9fee;
+    --primary-hover: #1d4ed8;
+    --bg-light: #f8fafc;
+    --text-main: #0f172a;    /* Deep Slate Navy */
+    --text-muted: #475569;   /* Muted Gray-Blue */
+    --border-color: #e2e8f0; /* Soft light border */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light); /* Changed from rgb(214, 223, 220) */
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #70f3f3; /* Matching your teal color */
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    vertical-align: middle;
+    margin-right: 12px;
+    transition: transform 0.2s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+    /* Prevents the 'hand' cursor from flickering the element */
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    user-select: none;
+    margin: 0; 
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 24px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+.btn-signin {
+    background: var(--primary-blue);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-signin:hover {
+    background: var(--primary-hover);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: var(--text-main);
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    font-size: 18px;
+}
+
+.btn-purple {
+    background: var(--primary-blue); /* Renamed logically to blue */
+    color: white;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+}
+
+.btn-purple:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.4);
+}
+
+/* Section Containers */
+.section-container {
+    max-width: 1100px;
+    margin: 40px auto 100px;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 48px;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Info Cards */
+.info-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    display: block;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.card-title-small {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #72f7f0; /* Replaced yellow with white */
+    border-top: 1px solid var(--border-color);
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.footer strong {
+    color: var(--text-main);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .navbar {
+        padding: 15px 5%;
+    }
+}

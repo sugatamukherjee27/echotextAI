@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EchoText AI | Turn Your Voice into Text with EchoText AI.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='land.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+    <a href="/" style="text-decoration: none; display: flex; align-items: center;">
+        <svg class="logo-img" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 5 L15 20 V45 C15 65 35 88 50 95 C65 88 85 65 85 45 V 20 L50 5Z" fill="#1a365d"/>
+            
+            <rect x="28" y="24" width="24" height="24" rx="4" stroke="white" stroke-width="2.5" fill="none"/>
+            <rect x="37" y="29" width="6" height="9" rx="3" fill="white"/>
+            <path d="M35 36 C35 39 37 41 40 41 C43 41 45 39 45 36" stroke="white" stroke-width="1.5" fill="none"/>
+            <path d="M40 41 V44" stroke="white" stroke-width="1.5"/>
+
+            <rect x="48" y="52" width="24" height="24" rx="4" stroke="white" stroke-width="2.5" fill="none"/>
+            <path d="M54 59 H66 M60 59 V68" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M64 63 H68 M66 63 V68" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+
+            <path d="M58 36 Q68 36 68 46" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+            <path d="M42 66 Q32 66 32 56" stroke="white" stroke-width="2" fill="none"/>
+            
+            <path d="M65 43 L68 46 L71 43" stroke="white" stroke-width="2" fill="none"/>
+            <path d="M29 59 L32 56 L35 59" stroke="white" stroke-width="2" fill="none"/>
+        </svg>
+        <span class="logo-text">EchoText AI</span>
+    </a>
+    </div>
+    <div class="nav-links">
+        <a href="{{ url_for('login') }}">Log in</a>
+        <a href="{{ url_for('register') }}" class="btn-signin">Sign up</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Transform Audio, Video, or Prompts into AI Insights.</h1>
+        <p>Instantly generate highly accurate notes, summaries, quizzes, or flashcards. Upload your recordings or type a prompt to get editable results in minutes.</p>
+        <div class="hero-action">
+            <a href="{{ url_for('register') }}" class="btn-purple">Start Transcribing Now</a>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">How It Works ?</h2>
+        <div class="grid-container">
+            <div class="info-card">
+                <span class="card-title">1.Upload or paste</span>
+                <p>Upload Drag and drop your audio, video, or text prompt. We support all major formats including MP4, MP3, and WAV.</p>
+            </div>
+            <div class="info-card">
+                <span class="card-title">2. AI processing.</span>
+                <p>Sit back while our AI transcribes and formats your content with high precision and lightning speed.</p>
+            </div>
+            <div class="info-card">
+                <span class="card-title">3. Download </span>
+                <p>Your polished document is ready. Export as a PDF, DOCX, or TXT file with a single click.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">What are the features?</h2>
+        <div class="grid-container">
+            <div class="info-card">
+                <span class="card-title-small">Fast processing</span>
+                <p>Our high-precision AI transforms your media or text prompts into structured content in minutes. Spend less time editing and more time doing.</p>
+            </div>
+            <div class="info-card">
+                <span class="card-title-small">All formats supported</span>
+                <p>Whether you upload audio and video (MP3, WAV, MP4) or paste raw text prompts, our AI handles every input instantly and seamlessly.</p>
+            </div>
+            <div class="info-card">
+                <span class="card-title-small">Download text in any format</span>
+                <p>Take your content with you. Once the conversion is complete, export your transcript as a professional TXT, PDF, or DOCX file with a single click.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p><strong>EchoText AI</strong> — Audio/Video to Text, built for learning and demonstration purposes, showcasing the power of AI-driven transcription and document generation.</p>
+    <p>Developed by <strong>Sugata Mukherjee</strong></p>
+    <p>© 2026</p>
+</footer>
+
+</body>
+</html>

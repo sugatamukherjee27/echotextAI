@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Account Settings - AI NoteGen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+
+<body>
+  <header class="header-nav">
+    <a href="{{ url_for('dashboard') }}" class="back-link">← Back to Dashboard</a>
+    <h1 class="header-title">Your Profile</h1>
+  </header>
+
+  <main class="profile-grid">
+    <aside class="sidebar-card">
+      <div class="avatar-container">
+        {% if profile_image %}
+          <img src="{{ url_for('static', filename='uploads/' ~ profile_image) }}" alt="Profile Picture" class="profile-img">
+        {% else %}
+          <div class="profile-img-placeholder"><i class='bx bx-user'></i></div>
+        {% endif %}
+      </div>
+      
+      <div class="user-meta">
+        <h3>@{{ username }}</h3>
+        <p>{{ email }}</p>
+      </div>
+
+      <div class="photo-actions">
+        <form method="POST" action="{{ url_for('upload_profile_photo') }}" enctype="multipart/form-data">
+          <label class="btn btn-purple">
+            Change Photo
+            <input type="file" name="profile_image" accept="image/*" onchange="this.form.submit()" hidden>
+          </label>
+        </form>
+
+        {% if profile_image %}
+        <form method="POST" action="{{ url_for('delete_profile_photo') }}">
+          <button type="submit" class="btn btn-link-red">Remove Photo</button>
+        </form>
+        {% endif %}
+      </div>
+    </aside>
+
+    <section class="main-content">
+      
+      <div class="info-card">
+        <div class="card-header">
+          <i class='bx bx-user-circle'></i>
+          <h2>Personal Information</h2>
+        </div>
+        
+        <div class="info-grid">
+          <div class="info-item">
+            <label>FIRST NAME</label>
+            <p>{{ firstname }}</p>
+          </div>
+          <div class="info-item">
+            <label>LAST NAME</label>
+            <p>{{ lastname }}</p>
+          </div>
+          <div class="info-item">
+            <label>USERNAME</label>
+            <p>{{ username }}</p>
+          </div>
+          <div class="info-item">
+            <label>EMAIL ADDRESS</label>
+            <p>{{ email }}</p>
+          </div>
+          <div class="info-item full-width">
+            <label>DATE OF BIRTH</label>
+            <p>{{ date }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-actions">
+        </div>
+
+      <div class="info-card">
+        <div class="card-header">
+          <i class='bx bx-lock-alt' ></i>
+          <h2>Security</h2>
+        </div>
+        <div class="security-flex">
+          <div class="security-text">
+            <p>If you wish to change your password, please click the button.</p>
+            <small>Last updated: Securely encrypted</small>
+          </div>
+          <a href="{{ url_for('change_password') }}" class="btn btn-outline-purple">Change Password</a>
+        </div>
+      </div>
+
+       <div class="danger-zone" style="margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px;">
+        <h3 style="color: #de241d;">Account Deletion</h3>
+        <p>Once you delete your account, there is no going back. Please be certain.</p>
+        <form action="{{ url_for('delete_account') }}" method="POST" onsubmit="return confirm('ARE YOU SURE? This will permanently delete your account and all your history. This action cannot be undone.');">
+            <button type="submit" style="background-color: #ff4d4d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                Delete Account Permanently
+            </button>
+        </form>
+    </div>
+
+    </section>
+  </main>
+</body>
+</html>

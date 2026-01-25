@@ -1,0 +1,159 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ============================= */
+/* PAGE BACKGROUND */
+/* ============================= */
+.auth-body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c98912db; /* fallback */
+    background:
+            linear-gradient(
+            120deg,
+            rgb(46, 247, 86),
+            rgb(239, 178, 47),
+            rgba(245, 242, 69, 0.912)
+            );
+    background-attachment: fixed;
+    color: #111;
+}
+
+/* ============================= */
+/* AUTH CARD */
+/* ============================= */
+.auth-card {
+    width: 360px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================= */
+/* HEADINGS */
+/* ============================= */
+.auth-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 24px;
+}
+
+/* ============================= */
+/* INPUT GROUPS */
+/* ============================= */
+.input-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 46px;
+    padding: 0 48px 0 18px;
+    border-radius: 30px;
+    border: 1.5px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.input-group input:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+.primary-btn {
+    width: 100%;
+    height: 46px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    margin-top: 8px;
+}
+
+.primary-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ============================= */
+/* FLASH MESSAGES */
+/* ============================= */
+.flash {
+    background: #ffecec;
+    color: #c0392b;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+/* ============================= */
+/* FOOTER LINKS */
+/* ============================= */
+.footer-text {
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.footer-text a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 420px) {
+    .auth-card {
+        width: 90%;
+        padding: 28px 22px;
+    }
+}

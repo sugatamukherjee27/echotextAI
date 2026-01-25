@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | AI NoteGen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+
+    <div class="wrapper">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for m in messages %}
+                    <p>{{ m }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <form method="post" class="form-container">
+            <h1 class="main-title">Welcome</h1>
+            <p class="subtitle">Please enter your details to sign in</p>
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Sign in</button>
+
+            <!-- <div class="footer-link">
+                <p>New to AI NoteGen? <a href="/register">Register now</a></p>
+            </div> -->
+            <div class="footer-link">
+                <p>New to AI NoteGen? <a href="{{ url_for('register') }}">Register now</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
