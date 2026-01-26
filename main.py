@@ -10,6 +10,15 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from utils.speech_to_text import convert_to_text
 from utils.ai_summarizer import generate_output
 
+hide_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_style, unsafe_allow_html=True)
+
 # --- INITIAL SETUP ---
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
