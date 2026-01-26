@@ -6,8 +6,8 @@ EchoText AI is a full-stack AI-powered application that transforms raw text, aud
 
 ## 🔗 Live Demo
 👉 Click here to use the App
-https://echotextai-app.streamlit.app/<img width="855" height="105" alt="image" src="https://github.com/user-attachments/assets/e7ce3f46-ad46-4bd0-b6d8-c2ff41640f7c" />
 
+https://echotextai-app.streamlit.app/
 ---
 
 ## 📖 About The Project
