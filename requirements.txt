@@ -1,0 +1,6 @@
+streamlit
+supabase
+openai-whisper
+requests
+werkzeug
+python-dotenv
