@@ -56,96 +56,7 @@ The goal is to save time, improve comprehension, and enhance learning efficiency
 
 ---
 
-## 📂 Project Structure
-
-```
-EchoText_AI/
-│
-├── main.py
-├── requirements.txt
-├── README.md
-├── .streamlit/
-│   └── secrets.toml
-└── assets/
-```
-
----
-
-## 💻 How To Run Locally
-
-Follow these steps to run EchoText AI on your machine.
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/sugatamukherjee27/EchoTextAI.git
-cd EchoText_AI
-```
-
----
-
-### 2️⃣ Create Virtual Environment (Recommended)
-
-```bash
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-```
-
----
-
-### 3️⃣ Set Up Environment Variables
-
-Create a file:
-
-```
-.streamlit/secrets.toml
-```
-
-Add your credentials:
-
-```toml
-SUPABASE_URL = "your_supabase_url"
-SUPABASE_API_KEY = "your_supabase_key"
-HF_API_KEY = "your_huggingface_token"
-```
-
----
-
-### 4️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-⚠️ Make sure **FFmpeg** is installed and available in your system PATH.
-
----
-
-### 5️⃣ Run the Application
-
-```bash
-streamlit run main.py
-```
-
-Open your browser and visit:
-
-```
-http://localhost:8501
-```
-
----
-
 ## 📸 Screenshots
-*(Add screenshots or GIFs here)*
-
----
-
-## 🔐 Security Notes
-
-- Never commit `.streamlit/secrets.toml`
-- Rotate API keys if accidentally exposed
-- Use strong passwords
 
 ---
 
@@ -158,28 +69,11 @@ http://localhost:8501
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a pull request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 👨‍💻 Author
 
 **Jaya Prakash Grahacharya**
 
-GitHub: https://github.com/jaya-prakash-grahacharya
+GitHub: https://github.com/sugatamukherjee27
 
 ---
 
