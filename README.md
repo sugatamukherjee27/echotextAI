@@ -56,10 +56,6 @@ The goal is to save time, improve comprehension, and enhance learning efficiency
 
 ---
 
-## 📸 Screenshots
-
----
-
 ## 👨‍💻 Author
 
 **Jaya Prakash Grahacharya**
