@@ -60,15 +60,6 @@ The goal is to save time, improve comprehension, and enhance learning efficiency
 
 ---
 
-## 🚧 Future Improvements
-
-- Support for additional languages
-- Export to PDF/Word
-- Summarization presets (short/medium/long)
-- Collaborative sharing
-
----
-
 ## 👨‍💻 Author
 
 **Jaya Prakash Grahacharya**
