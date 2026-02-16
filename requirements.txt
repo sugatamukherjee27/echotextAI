@@ -1,41 +1,11 @@
-# Web Framework and Utilities
 Flask
 python-dotenv
 Werkzeug
-
-# Database and Authentication
 supabase
 gotrue
 postgrest
-
-# Document Generation and Processing
 reportlab
 python-docx
-
-# AI and Audio Processing
 openai-whisper
 requests
-
-# Optional but recommended for production
 gunicorn
-# Web Framework and Utilities
-Flask
-python-dotenv
-Werkzeug
-
-# Database and Authentication
-supabase
-gotrue
-postgrest
-
-# Document Generation and Processing
-reportlab
-python-docx
-
-# AI and Audio Processing
-openai-whisper
-requests
-
-# Optional but recommended for production
-gunicorn
-
