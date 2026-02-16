@@ -1,18 +1,20 @@
-# Install CPU-only PyTorch first to save space (approx 150MB vs 2GB)
---extra-index-url https://download.pytorch.org/whl/cpu
-torch
-torchaudio
-torchvision
-
-# Rest of your dependencies
+# Web Framework and Utilities
 Flask
 python-dotenv
 Werkzeug
+
+# Database
 supabase
-gotrue
-postgrest
+
+# Document Generation
 reportlab
 python-docx
+
+# AI/ML & Audio Processing
 openai-whisper
-requests
-gunicorn
+torch
+numpy
+
+# Transcription & Processing dependencies (often used in utils)
+librosa
+soundfile
