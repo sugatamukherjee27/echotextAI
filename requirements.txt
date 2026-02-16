@@ -1,18 +1,1 @@
---extra-index-url https://download.pytorch.org/whl/cpu
-torch
-torchaudio
-Flask==3.1.2
-Flask-Session==0.8.0
-psycopg2-binary==2.9.11
-python-dotenv==1.2.1
-Werkzeug==3.1.5
-requests==2.32.5
-gunicorn==21.2.0
-python-docx==1.2.0  
-reportlab==4.4.9
-lxml==6.0.2
-openai-whisper
-openai==2.14.0
-google-genai==1.57.0
-ffmpeg-python==0.2.0
-numpy==1.26.4
+New content
