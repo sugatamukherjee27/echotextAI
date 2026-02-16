@@ -1,0 +1,7 @@
+# Ignore uploaded media files
+static/uploads/
+*.mp4
+*.mp3
+*.wav
+__pycache__/
+*.pyc
