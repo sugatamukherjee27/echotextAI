@@ -1,7 +1,7 @@
 body {
     font-family: "Inter", -apple-system, sans-serif;
-    background-color: #fdf982;
-    color: #4b5563;
+    background-color: #f2f2f2;
+    color: #000000;
     margin: 0;
     padding: 0;
 }
@@ -22,18 +22,10 @@ body {
     gap: 15px;
 }
 
-.back-link {
-    text-decoration: none;
-    color: #500a0a;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-}
-
 .page-title {
     font-size: 24px;
     font-weight: 700;
-    color: #111827;
+    color: #000000;
     margin: 0;
 }
 

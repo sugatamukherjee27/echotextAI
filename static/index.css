@@ -1,8 +1,8 @@
 :root {
     /* Synced with land.css palette */
-    --primary-blue: #f4f43d;
-    --primary-hover: #faef22;
-    --bg-light: #fdf982;
+    --primary-blue: #3557e6;
+    --primary-hover: #5a7afa;
+    --bg-light: #fbfbf5;
     --text-main: #0f172a;    /* Deep Slate Navy */
     --text-muted: #475569;   /* Muted Gray-Blue */
     --border-color: #e2e8f0; /* Soft light border */
@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 16px 5%;
-    background: #63f529; /* Removed rgb(231, 244, 82) */
+    background: #4568f2; /* Removed rgb(231, 244, 82) */
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -68,7 +68,7 @@ body {
 .logo-text {
     font-size: 24px;
     font-weight: bold;
-    color: #000;
+    color: #fefafa;
     user-select: none;
     margin: 0; 
     padding: 0;
@@ -84,7 +84,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-main);
+    color: #f8f9fa;;
     margin-left: 24px;      /* Spacing between individual links */
     font-size: 16px;
     font-weight: 500;
@@ -92,11 +92,11 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--primary-blue);
+    color: #69c3ff;
 }
 
 .nav-links .logout-btn {
-    color: #ef4444; /* Standard red for logout */
+    color: #fdfcfc; /* Standard red for logout */
 }
 
 .dashboard-container {
@@ -239,7 +239,7 @@ textarea {
     width: 100%;
     padding: 14px;
     background: var(--primary-blue);
-    color: rgb(13, 12, 12);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 8px;
     font-weight: 700;
@@ -255,8 +255,8 @@ textarea {
 }
 
 .btn-secondary {
-    background: #95e42e; /* Very light blue tint */
-    color: #0f0f0f;;
+    background: #3557e6;; /* Very light blue tint */
+    color: #fdfcfc;;
     border: none;
     padding: 8px 16px;
     border-radius: 20px;

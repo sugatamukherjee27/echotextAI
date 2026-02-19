@@ -554,3 +554,6 @@ def add_header(response):
     response.headers["Expires"] = "-1"
     return response
 
+# ---------------- ENTRY POINT ----------------
+if __name__ == "__main__":
+    app.run(debug=True)

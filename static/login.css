@@ -1,5 +1,6 @@
+/* ---------- PAGE BACKGROUND ---------- */
 body {
-    background-color: #d0f529;
+    background: linear-gradient(135deg, #4a6cf7, #3f63e0);
     font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -8,86 +9,129 @@ body {
     margin: 0;
 }
 
+/* ---------- WHITE CARD CONTAINER ---------- */
 .form-container {
-    background: #a4ef87;
-    padding: 2px 45px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(18, 17, 17, 0.793);
-    width: 92%;
-    max-width: 450px;
+    background: #ffffff;
+    max-width: 900px;
+    width: 100%;
+    padding: 35px 40px;
+    margin: 0 15px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
 }
 
+/* ---------- TITLES ---------- */
 .main-title {
-    color: #080807;
+    color: #2d2d2d;
     text-align: center;
-    font-size: 28px;
-    font-weight: 800;
-    margin-bottom: 8px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
 .subtitle {
     text-align: center;
-    color: #101010;
+    color: #777;
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
+/* ---------- INPUT GROUP ---------- */
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .input-group label {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    color: #0f0f0f;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 6px;
+    text-transform: none;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #e1e5ee;
-    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
     font-size: 14px;
+    background: #f8f9fc;
     box-sizing: border-box;
-    transition: border-color 0.3s;
+    transition: all 0.25s ease;
 }
 
 .input-group input:focus {
     outline: none;
-    border-color: #faef22;
+    border-color: #4a6cf7;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(74,108,247,0.15);
 }
 
+/* ---------- GRID LAYOUT ---------- */
 .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 20px;
 }
 
+/* Mobile responsive */
+@media (max-width: 650px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- BUTTON ---------- */
 .btn-primary {
     width: 100%;
-    background-color:#faef22;
-    color: rgb(14, 14, 12);
+    background: #4a6cf7;
+    color: white;
     padding: 14px;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
+    transition: 0.2s;
 }
 
+.btn-primary:hover {
+    background: #3557e6;
+    transform: translateY(-1px);
+}
+
+/* ---------- FOOTER ---------- */
 .footer-link {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 14px;
-    color: #0b0b0b;
+    color: #666;
 }
 
 .footer-link a {
-    color: #180cf0;
+    color: #4a6cf7;
     text-decoration: none;
     font-weight: 600;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #555;
+    margin: 20px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e6e8ef;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 10px;
 }

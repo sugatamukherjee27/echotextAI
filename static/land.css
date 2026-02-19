@@ -1,8 +1,8 @@
 :root {
-    /* Updated to a more professional Royal Blue and Slate palette */
-    --primary-blue: #f4f43d;
-    --primary-hover: #faef22;
-    --bg-light: #fdf982;
+    /* Synced with land.css palette */
+    --primary-blue: #3557e6;
+    --primary-hover: #5a7afa;
+    --bg-light: #fbfbf5;
     --text-main: #0f172a;    /* Deep Slate Navy */
     --text-muted: #475569;   /* Muted Gray-Blue */
     --border-color: #e2e8f0; /* Soft light border */
@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: #63f529; /* Matching your teal color */
+    background-color: #4568f2; /* Matching your teal color */
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -66,7 +66,7 @@ body {
 .logo-text {
     font-size: 24px;
     font-weight: bold;
-    color: #000;
+    color: #ffffff;
     user-select: none;
     margin: 0; 
     padding: 0;
@@ -74,7 +74,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-main);
+    color: white;
     font-size: 16px;
     font-weight: 500;
     margin-left: 24px;
@@ -82,19 +82,19 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--primary-blue);
+    color: #69c3ff;;
 }
 
 .btn-signin {
-    background: var(--primary-blue);
-    color: rgb(14, 14, 12) !important;
+    background: rgb(41, 154, 252);
+    color: rgb(255, 255, 255) !important;
     padding: 8px 20px;
     border-radius: 6px;
     transition: background 0.2s;
 }
 
 .btn-signin:hover {
-    background: #e4f529;
+    background: #69c3ff;
 }
 
 /* Hero Section */
@@ -120,7 +120,7 @@ body {
 
 .btn-purple {
     background: var(--primary-blue); /* Renamed logically to blue */
-    color: rgb(207, 25, 25);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 8px;
@@ -199,14 +199,14 @@ body {
 .footer {
     text-align: center;
     padding: 40px 20px;
-    background: #63f529; /* Replaced yellow with white */
+    background: #4568f2; /* Replaced yellow with white */
     border-top: 1px solid var(--border-color);
     font-size: 18px;
-    color: var(--text-muted);
+    color: white;
 }
 
 .footer strong {
-    color: var(--text-main);
+    color: white;
 }
 
 /* Mobile Responsive */

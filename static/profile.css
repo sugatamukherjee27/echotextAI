@@ -1,40 +1,36 @@
 :root {
-  --primary-purple: #faef22;;
-  --bg-light: #fdf982;
+  --primary-purple: #3557e6;
+  --bg-light: #f0f1ff;
   --text-main: #0f172a;    /* Deep Slate Navy */
   --text-muted: #475569;   /* Muted Gray-Blue */
   --border-color: #eee;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-light);
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: var(--text-main);
+    font-family: "Inter", -apple-system, sans-serif;
+    background-color: #f2f2f2;
+    color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
 .header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5%;
-  background: #63f529;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.back-link {
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 40px;
+    width: 100%;
+    gap: 15px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .header-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  color: #222;
+  color: #080808;
 }
 
 /* Layout Grid */
@@ -104,7 +100,7 @@ body {
   transition: 0.2s;
 }
 
-.btn-purple { background: var(--primary-purple); color: rgb(13, 12, 12); }
+.btn-purple { background: var(--primary-purple); color: rgb(247, 242, 242); }
 .btn-purple:hover { opacity: 0.9; }
 
 .btn-outline-purple {
