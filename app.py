@@ -95,12 +95,18 @@ def register():
         return redirect(url_for("dashboard"))
         
     if request.method == "POST":
-        username = request.form.get("username")
-        first = request.form.get("firstname")
-        last = request.form.get("lastname")
-        email = request.form.get("email")
-        password = request.form.get("password")
-        date = request.form.get("date")
+        # Safe extraction: strip whitespace immediately from all text fields
+        username = (request.form.get("username") or "").strip()
+        first = (request.form.get("firstname") or "").strip()
+        last = (request.form.get("lastname") or "").strip()
+        email = (request.form.get("email") or "").strip().lower()
+        password = (request.form.get("password") or "").strip()
+        date = (request.form.get("date") or "").strip()
+
+        # Now all() accurately catches fields that are completely empty OR just spaces
+        if not all([username, first, last, email, password, date]):
+            flash("All registration fields are required.")
+            return redirect(url_for("register"))
 
         if len(password) < 8:
             flash("Password must be at least 8 characters long.")
@@ -108,7 +114,6 @@ def register():
         
         try:
             # 1. Check if user exists
-            # We select count or id where username OR email matches
             existing_user = supabase.table("users").select("id").or_(f"username.eq.{username},email.eq.{email}").execute()
             
             if existing_user.data:
@@ -142,15 +147,23 @@ def login():
         return redirect(url_for("dashboard"))
         
     if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-        
+        username = (request.form.get("username") or "").strip()
+        password = (request.form.get("password") or "").strip()
+
+        if not username or not password:
+            flash("All fields are required.")
+            return redirect(url_for("login"))
+
+        if len(password) < 8:
+            flash("Password must be at least 8 characters long.")
+            return redirect(url_for("login"))
+             
         try:
-            # Fetch user
+            # Fetch user matching username
             response = supabase.table("users").select("*").eq("username", username).execute()
             
             if response.data:
-                user = response.data[0] # Get the first (and only) result
+                user = response.data[0]
                 
                 if check_password_hash(user["password_hash"], password):
                     session.clear()
@@ -212,7 +225,7 @@ def dashboard():
             
     return render_template(
         "index.html",
-        user_id=session["user_id"],
+        user_id=session.get("user_id"),
         result=result,
         input_text=input_text,
         selected=selected
@@ -296,7 +309,7 @@ def history():
             db_query = db_query.or_(f"input_text.ilike.{search_pattern},output_text.ilike.{search_pattern}")
 
         response = db_query.execute()
-        records = response.data
+        records = response.data or []
 
         # --- DATE FORMATTING FIX ---
         for record in records:
@@ -464,7 +477,7 @@ def upload_profile_photo():
     if not file or not file.filename:
         flash("No image selected")
         return redirect(url_for("profile"))
-    if not allowed_file(file.filename, IMAGE_EXTENSIONS):
+    if "." not in file.filename or not allowed_file(file.filename, IMAGE_EXTENSIONS):
         flash("Invalid image format")
         return redirect(url_for("profile"))
         
